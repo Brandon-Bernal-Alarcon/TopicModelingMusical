@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización con Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Cargar Chart.js desde CDN -->
+</head>
+<body>
+    <h1>Gráfico de Barras con Chart.js</h1>
+    <canvas id="myChart" width="400" height="200"></canvas> <!-- Aquí se dibuja el gráfico -->
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico: barras
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril'], // Etiquetas del eje X
+                datasets: [{
+                    label: 'Ventas',
+                    data: [12, 19, 3, 5], // Datos para cada mes
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de las barras
+                    borderColor: 'rgba(255, 99, 132, 1)', // Color del borde de las barras
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
