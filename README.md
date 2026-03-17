@@ -1,6 +1,6 @@
 # TopicModelingMusical
 
-Este proyecto puede ejecutarse completamente en Google Colab.
+Este proyecto puede ejecutarse en Google Colab.
 
 Incluye:
 - Preprocesamiento NLP
